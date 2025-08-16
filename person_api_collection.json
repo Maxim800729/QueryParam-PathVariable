@@ -1,0 +1,253 @@
+{
+  "info": {
+    "name": "Person API",
+    "_postman_id": "12345678-abcd-efgh-ijkl-1234567890ab",
+    "description": "Коллекция запросов для тестирования PersonController",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get all persons",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/person/all",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "person",
+            "all"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Search by surname",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/person/search?surname=Ivanov",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "person",
+            "search"
+          ],
+          "query": [
+            {
+              "key": "surname",
+              "value": "Ivanov"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Filter by age",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/person/filter?min=20&max=40",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "person",
+            "filter"
+          ],
+          "query": [
+            {
+              "key": "min",
+              "value": "20"
+            },
+            {
+              "key": "max",
+              "value": "40"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Sort persons",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/person/sort?by=name&dir=asc",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "person",
+            "sort"
+          ],
+          "query": [
+            {
+              "key": "by",
+              "value": "name"
+            },
+            {
+              "key": "dir",
+              "value": "asc"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Add person",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"Max\", \"surname\": \"Petrov\", \"age\": 22}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/person/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "person",
+            ""
+          ]
+        }
+      }
+    },
+    {
+      "name": "Delete by surname",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/person/deleteBySurname?surname=Ivanov",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "person",
+            "deleteBySurname"
+          ],
+          "query": [
+            {
+              "key": "surname",
+              "value": "Ivanov"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get oldest person",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/person/oldest",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "person",
+            "oldest"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get youngest person",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/person/youngest",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "person",
+            "youngest"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get beneficial persons (GET)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/person/get/beneficial",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "person",
+            "get",
+            "beneficial"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get beneficial persons (POST)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/person/get/beneficial",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "person",
+            "get",
+            "beneficial"
+          ]
+        }
+      }
+    }
+  ]
+}
